@@ -29,7 +29,7 @@ function splitSentence(a) {
 
 // Desafio 4
 function concatName(names) {
-  return (`${names[names.length - 1]}, ${names[0]}`);
+  return names[names.length - 1] + ', ' + names[0];
 }
 
 // Desafio 5
@@ -93,7 +93,7 @@ function fizzBuzz(numbers) {
 function encode(e) {
   let coded = '';
   for (let index of e) {
-    switch (index) {
+    switch (index.toLowerCase()) {
     case 'a': coded += '1';
       break;
     case 'e': coded += '2';

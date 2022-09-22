@@ -70,6 +70,13 @@ function difAbsMaior(a, b, c) {
 
 // Desafio 13
 function hydrate(string) {
+  let qntAgua = stringToNumber(string);
+  if (qntAgua === 1) {
+    return qntAgua + ' copo de água'
+  }
+  return qntAgua + ' copos de água'
+}
+function stringToNumber(string) {
   let compareNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   let qntAgua = 0;  
   for (let caracters of string) {
@@ -79,11 +86,21 @@ function hydrate(string) {
       }
     }
   }
-  if (qntAgua === 1) {
-    return qntAgua + ' copo de água'
-  }
-  return qntAgua + ' copos de água'
+  return qntAgua;
 }
+// function hydrate(string) {
+//   let qntAgua = 0;
+//   for (let indexString = 0; indexString < string.length; indexString += 1) {
+//     if ((string[indexString] > 0) && (string[indexString] <= 9)) {
+//       qntAgua += parseInt(string[indexString]);
+//     }
+//   }
+//   if (qntAgua === 1) {
+//     return qntAgua + ' copo de água'
+//   }
+//   return qntAgua + ' copos de água'
+// }
+
 // function hydrate(string) {
 //   let qntAgua = 0;
 //   let result = num(string);
@@ -98,7 +115,7 @@ function hydrate(string) {
 // function num(a) {
 //   let numbers = a.replace(/[^0-9]/g, '');
 //   return numbers;
-// } ***Forma alternativa utilizando uma maneira de separar os números da string, que continuam como string concatenados, e depois desmembrando e transformando em número individualmente.
+// } ***Forma alternativa utilizando uma maneira de separar os números da string, que continuam como string concatenados, e depois desmembrando e transformando em número individualmente. Referência: https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript
 
 module.exports = {
   generatePhoneNumber,
